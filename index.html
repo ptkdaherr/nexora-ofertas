@@ -5,9 +5,27 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#111318">
   <title>Nexora — Ofertas de casa inteligente</title>
-  <meta name="description" content="Entre nos canais gratuitos da Nexora e receba ofertas verificadas de casa inteligente.">
-  <link rel="icon" type="image/png" href="/nexo-foto-perfil-whatsapp.png">
-  <link rel="apple-touch-icon" href="/nexo-foto-perfil-whatsapp.png">
+  <meta name="description" content="Entre nos canais gratuitos da Nexora e receba ofertas de casa inteligente com o preço conferido.">
+  <link rel="canonical" href="https://nexoraofertas.com.br/">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/favicon.png">
+
+  <!-- Sem isto o link vira texto seco quando compartilhado em grupo de WhatsApp/
+       Telegram — justamente onde este site vai circular. -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Nexora">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:url" content="https://nexoraofertas.com.br/">
+  <meta property="og:title" content="Nexora — Ofertas de casa inteligente">
+  <meta property="og:description" content="Alexa, lâmpada, câmera, tomada e robô aspirador com o preço conferido. Grupo no WhatsApp e canal no Telegram, de graça.">
+  <meta property="og:image" content="https://nexoraofertas.com.br/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Nexo, mascote da Nexora">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Nexora — Ofertas de casa inteligente">
+  <meta name="twitter:description" content="Alexa, lâmpada, câmera, tomada e robô aspirador com o preço conferido.">
+  <meta name="twitter:image" content="https://nexoraofertas.com.br/og.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
@@ -157,6 +175,17 @@
       font-weight:600;
     }
 
+    /* a declaração de afiliado precisa ser legível, não escondida — mas discreta */
+    .disclosure{
+      margin-top:10px;
+      max-width:34ch;
+      margin-inline:auto;
+      font-size:10px;
+      font-weight:500;
+      line-height:1.5;
+      opacity:.72;
+    }
+
     @keyframes enter{
       from{opacity:0;transform:translateY(14px)}
       to{opacity:1;transform:translateY(0)}
@@ -182,13 +211,16 @@
 <body>
   <main>
     <div class="avatar">
-      <img src="nexo-foto-perfil-whatsapp.png" alt="Nexo, mascote da Nexora">
+      <!-- 336px = 3x o tamanho exibido, pra ficar nítido em tela retina.
+           O PNG original tinha 2,5 MB pra mostrar 112px — no 4G, segundos de tela vazia. -->
+      <img src="nexo-avatar.jpg" alt="Nexo, mascote da Nexora"
+           width="112" height="112" fetchpriority="high" decoding="async">
     </div>
 
     <h1>Nexora Ofertas de Casa Inteligente</h1>
     <p class="promise">As melhores ofertas de casa inteligente ⚡</p>
     <p class="free">100% GRATUITO</p>
-    <div class="proof">Ofertas verificadas todos os dias</div>
+    <div class="proof">Conferimos o preço em cada oferta</div>
 
     <nav class="links" aria-label="Canais da Nexora">
       <a class="button whatsapp" href="https://chat.whatsapp.com/Btt2p6nbovFE89U4YBsvMr?mode=gi_t" target="_blank" rel="noopener noreferrer">
@@ -202,7 +234,16 @@
       </a>
     </nav>
 
-    <p class="note">Só produtos originais e lojas confiáveis 🔒</p>
+    <!-- A frase anterior ("Só produtos originais e lojas confiáveis") prometia algo que
+         não está sob nosso controle: quem vende é o marketplace. Um falsificado já
+         escapou do filtro uma vez. Aqui só afirmamos o que a gente realmente faz.
+         A segunda linha é declaração de publicidade (CDC/CONAR): link de afiliado
+         precisa ser declarado. -->
+    <p class="note">Comparamos os anúncios e mandamos o mais barato que encontramos 🔎</p>
+    <p class="note disclosure">
+      Ao comprar pelos nossos links, a Nexora pode receber uma comissão da loja —
+      sem custo nenhum a mais pra você.
+    </p>
   </main>
 </body>
 </html>
